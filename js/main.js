@@ -1,5 +1,10 @@
 $(document).ready(function () {
-
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    dots: true,
+    items: 1,
+    margin:10,
+  });
   $("#menu").on("click", "a", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
@@ -25,12 +30,6 @@ $(document).ready(function () {
     }
   });
 
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    loop: true,
-    dots: true,
-    autoplay: true,
-  });
 
   $('.count').each(function () {
     $(this).prop('Counter', 0).animate({
@@ -43,5 +42,5 @@ $(document).ready(function () {
       }
     });
   });
-  
+
 });
