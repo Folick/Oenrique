@@ -13,15 +13,13 @@ $(document).ready(function () {
       scrollTop: top
     }, 1500);
   });
-
   $(function () {
     $('.scrollup').click(function () {
       $("html, body").animate({
         scrollTop: 0
-      }, 1000);
+      }, 2000);
     })
   })
-
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       $('.scrollup').fadeIn();
@@ -29,8 +27,6 @@ $(document).ready(function () {
       $('.scrollup').fadeOut();
     }
   });
-
-
   $('.count').each(function () {
     $(this).prop('Counter', 0).animate({
       Counter: $(this).text()
@@ -42,5 +38,4 @@ $(document).ready(function () {
       }
     });
   });
-
 });
